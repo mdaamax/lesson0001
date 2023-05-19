@@ -15,11 +15,15 @@ class user
         $this -> $password = password_hash($password,PASSWORD_DEFAULT);
     }
     public function getId(){
-        return; $this -> id;
+        return $this -> id;
     }
     public function setId($id){
-        $this -> id = $id;
+        $this -> id = str_pad(
+            $id, 8, 0,STR_PAD_LEFT
+        );
     }
+
+
 
     public function cryptPassword()
     {
@@ -40,8 +44,10 @@ class user
 
 $ivan = new User(1,"newIvan",'xz');
 $petr = new User(1,1,1);
+var_dump($ivan -> setId(1));
 $ivan -> self_dump();
 $petr -> self_dump();
+
 
 
 
