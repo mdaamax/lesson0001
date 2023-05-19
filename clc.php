@@ -1,5 +1,5 @@
 <?php
-class сalculator {
+class Calculator {
     private $num1;
     private $num2;
 
@@ -32,7 +32,7 @@ class сalculator {
 $num1 = 10;
 $num2 = 5;
 
-$calculator = new сalculator($num1, $num2);
+$calculator = new Calculator($num1, $num2);
 
 echo "Сложение: " . $calculator->add() . "<br>";
 echo "Вычитание: " . $calculator->subtract() . "<br>";
